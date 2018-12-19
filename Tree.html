@@ -1,0 +1,102 @@
+<html>
+<body>
+<canvas id="canvas" width="1080" height="800"></canvas>
+ <div> <p>Work in progress, fibonacci tree. <br>W grows the tree and iterates the branches
+     <br>E causes a parabolic curve of hte branches and iterates the branches <br> R resets it to normal</p></div>
+<script type="text/javascript">
+    
+var elem = document.getElementById("canvas");
+    window.addEventListener('keyup', doKeyDown, false);
+
+   var context = elem.getContext('2d');
+    
+    var width = canvas.width * .5;
+    var height = canvas.height;
+    
+   
+ 
+    
+    //Redraws the tree
+    
+    function redraw()
+    {
+        context.clearRect(0,0, canvas.width,canvas.height)
+                context.beginPath();
+                drawTree(width, height, -90, depth);
+                context.closePath();
+                context.stroke();
+
+        
+    }
+    
+   function doKeyDown(e){
+
+			
+			//	THE W KEY, simply makes the tree bigger
+			
+			if (e.keyCode == "87")
+            {
+				depth += 1;  
+                redraw();
+                
+ 			}
+    //E key, makes the lines on the tree curve in a bit, causes severe memory leaks if mashed, should probably implement a limit but eh
+    if (e.keyCode == "69")
+            {
+				
+                tenoh = tenoh * .9;
+                depth ++;
+               redraw();
+                
+ 			}
+       //Resets it back to normal
+       if (e.keyCode == "82")
+           {
+               depth = 3;
+               tenoh = 10;
+               redraw();
+           }
+   }
+
+//    elem.addEventListener('keydown', doKeyDown(), true);
+
+
+
+    
+   
+ 
+context.fillStyle = '#C0C0C0';
+context.lineWidth = 1;
+ 
+ 
+var deg_to_rad = Math.PI / 180.0;
+var x = 0;
+var depth = 3;
+
+function drawLine(x1, y1, x2, y2, brightness){
+  context.moveTo(x1, y1);
+  context.lineTo(x2, y2);
+}
+ 
+var tenoh = 10.0
+
+function drawTree(x1, y1, angle, depth){
+  if (depth !== 0){
+    var x2 = x1 + (Math.cos(angle * deg_to_rad) * depth * tenoh);
+    var y2 = y1 + (Math.sin(angle * deg_to_rad) * depth * tenoh);
+    drawLine(x1, y1, x2, y2, depth);
+    drawTree(x2, y2, angle - 20, depth - 1);
+    drawTree(x2, y2, angle + 20, depth - 1);
+    
+  }
+}
+ 
+redraw();
+   
+        
+    
+    
+</script>
+
+</body>
+</html>

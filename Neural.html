@@ -1,0 +1,46 @@
+<html>
+<head></head>
+    
+<title>Neural Network</title>
+    <body>
+        <p>This is a very basic neural network, right now it detects a string of words to determine whether the phrase you have input was said by Trump or Kim Kardashian. The brain is super super super simple so it's not 100%, to get it better I either need to input a lot more phrases for it to analzye or create a crawler to go over their twitter accounts and analyze it If the crawler exists I could add on more twitter accounts and accidently create a brain, but uh, not now......?
+            <br><br> The brain is also very biased right now, I have given really weighted statements for trump but it seems to really favor kardashian. It may require intensive training but that would cause the browser to lock up since it has to train, I could have it progressively train as you feed it tweets but that's just as annoying.
+            <br><br> I suspect the bot favors kardashian as the word count is lower and it simply goes with whatever input is first, at which I have kardashian listed first, as more complete sentences are formed in the input box, the bot kind of chooses more correct....For more accurate results try to use phrases longer than 6 words.
+            <br> Eventually I'll add more people to the list, want to see if it can tell the difference between Trump, Kim, and Cardi B? A more obtuse tweeter like Cher? or even if Trump or Gordon Ramsey can be told apart?
+    <input type="text" id = "userInput"> </input><br><!--//Input box-->
+<button id = "theButton" onclick="changeText2()" >try it </button></p><br> <!--//button to take info from Input Box-->
+    
+<div>This tweet was probably done by <p id="tweetID"></p> </div><br><br>
+<p> Also on each click, it goes through a mini training session so it can learn more. The process causes the browser to freeze, so I set the session to be very very light so it won't intrude on the user experience. Also in the background it'll run through a minilesson every second so it won't immediately crash the browser. So the longer the page stays open, the more the bot learns.</p><!--Display Area -->
+
+
+
+
+<script type="application/javascript" src='brain.js'></script>
+<script type="application/javascript" src='training.js'></script>
+<script type="application/javascript" src ='script.js'></script>
+
+<script type="application/javascript">
+       function changeText2(){
+	
+    var userInput = document.getElementById('userInput').value;
+	document.getElementById('tweetID').innerHTML = execute(userInput);
+           console.log(execute(userInput));
+    var i;
+    for (i = 0; i < 8; i++)
+    {
+train(trainingData);
+    }
+
+}
+ function train2()//Setinterval refuses to work if a function has an argument, so this is a container that is compliant with setinterval
+    {
+        train(trainingData);
+    }
+    
+    setInterval(train2, 1000);//:ets the brain run through a training session every second.
+</script>
+
+
+
+

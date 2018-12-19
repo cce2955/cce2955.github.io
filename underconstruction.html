@@ -1,0 +1,32 @@
+<html>
+<body>
+<canvas id="canvas" width="1080" height="800"></canvas>
+ <div> <p>WIP</p></div>
+    
+    <script>
+        var graph = document.getElementById("canvas");
+        window.addEventListener('keyup', doKeyDown, false);
+        var context = graph.getContext('2d');
+        var x1,y1,x2,y2;
+        y1= 1;
+        
+        
+        function drawLine(x1, y1, x2, y2, brightness){
+            context.moveTo(x1, y1);
+            context.lineTo(x2, y2);
+                }           
+        for (var i; i < 1080; i++)
+            {
+                x1 = Math.pow(y1,2);
+                y1 ++;
+                context.beginPath();
+                drawLine(x1,y1,x2,y2,1);
+                context.closePath();
+                context.stroke();
+                
+                y2 = y1;
+                x2 = x1;
+                
+            }
+    
+    </script>

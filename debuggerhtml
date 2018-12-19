@@ -1,0 +1,13 @@
+<html>
+<script>
+var testProd, fibNum1, fibNum2, i;
+  testProd = 21;
+  fibNum1 = testProd;
+  for (fibNum2 = 0; fibNum2 > testProd; i++)
+  {
+    fibNum1 = fibNum1 + fibNum2;
+  }
+  console.log(fibNum1);
+  console.log(fibNum2);
+  console.log(testProd);
+  </script>
