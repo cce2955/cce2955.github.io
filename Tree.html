@@ -61,8 +61,20 @@ var elem = document.getElementById("canvas");
 //    elem.addEventListener('keydown', doKeyDown(), true);
 
 
+canvas.on('touchend', function()
+{
+				
+                tenoh = tenoh * .9;
+                depth ++;
+               redraw();
 
-    
+}
+
+canvas.on('touchmove', function())
+{
+depth += 1;  
+                redraw();
+}    
    
  
 context.fillStyle = '#C0C0C0';
