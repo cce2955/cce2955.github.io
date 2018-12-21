@@ -6,8 +6,12 @@
 <script type="text/javascript">
     
 var elem = document.getElementById("canvas");
-    window.addEventListener('keyup', doKeyDown, false);
+window.addEventListener('keyup', doKeyDown, false);
+canvas.addEventListener("touchstart", handlerFunction, false);
 
+function handlerFunction(event) {
+alert();
+}
    var context = elem.getContext('2d');
     
     var width = canvas.width * .5;
