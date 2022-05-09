@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BootStrap Testing</title>
+    <h1>Here is my old website, as soon as I'm done with this angular project I will attempt to convert these projects to the angular website</h1>
+
+    <!-- template was premade from TemplateMo.com, the design is called Conquer (Details found in the style.css) and is available for commercial and non-commercial use
+    *I will attempt to make my own CSS just to try out, but for here I'm just following the guidelines.
+    -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<!--
+*The below code does Navigation stuff, also produces a button when on mobile or reduced screen
+-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+                <span class="icon-bar"></span>                        
+            </button>
+        </div>
+        <div class="single-page-nav sticky-wrapper" id="tmNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="#section1">Top</a></li>
+                <li><a href="#section2">View Programs</a></li>
+                <li><a href="#section3">Blog</a></li>
+                <li><a href="#section4">Contact Me</a></li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Creates the splash screen for the website -->
+<div id="section1">
+    <header id="header-area" class="intro-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <div class="header-content">
+                        <!-- Overriding the internal CSS sheet, it calls for pure white, but I'm going with these ugly colors just to try out-->
+                        <h1 style="color:black; -webkit-text-stroke-width: 1px; -webkit-text-stroke-color:darkgray;">Chris' Portflio</h1>
+                        <h4 style="color:blue; -webkit-text-stroke-width: 1px;  -webkit-text-stroke-color:cyan;">Website Partially Built with help of bootstrap</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+
+<!-- These are feature columns, linking to specific parts of my website-->
+<section id="section2" class="about-section">
+    <div class="container">
+        <div class="row text-center inner">
+            <div class="col-sm-4">
+                <div class="feature-content">
+                    <img src="img/1-1.jpg" alt="Image">
+                    <h2 class="feature-content-title green-text">Armstrong Calculator </h2>
+                    <p class="feature-content-description">Try out one of my programs, this one calculates an armstrong number
+                    </p>
+                    <!-- Link to a new page in a new window-->
+                    <a href="ArmstrongUpdated.html" class="feature-content-link green-btn" target="+blank">Try it out</a>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="feature-content">
+                    <img src="img/1-2.jpg" alt="Image">
+                    <h2 class="feature-content-title blue-text">PaP Program</h2>
+                    <p class="feature-content-description">Attempt the Poet and the Pendulum Problem</p>
+                    <a href="PoetPendulum.html" class="feature-content-link blue-btn">Try it out</a>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="feature-content">
+                    <img src="img/1-3.jpg" alt="Image">
+                    <h2 class="feature-content-title red-text">Basic Neural Network (Very Old)</h2>
+                    <p class="feature-content-description">Here's a simple neural network!!
+                    </p>
+                    <a href="Neural.html" class="feature-content-link red-btn">Neural Network!!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--Blog area featuring larger blocks to display data in-->
+<section id="section3">
+    <div class="container">
+        <div class="row text-center inner">
+            <div class="col-sm-6">
+                <div class="blog-content">
+                    <img src="img/2-1.jpg" alt="Image">
+                    <h2>Small Blog Area</h2>
+                    <p>This is an area to post latest news, with a proper database I could potentially link and display data, possibly randomize the data to be shown here or allow a user to get feedback on something<br>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="blog-content">
+                    <img src="img/2-2.jpg" alt="Image">
+                    <h2>Fibonnaci Tree Generator</h2>
+                    <p>WIP generator for generating a fibonacci tree. </p>
+                    <span><a href="Tree.html">Play!</a></span><br>
+                    <p id="blofr"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+
+<!-- Contact Us  Section-->>
+<section id="section4" class="contact-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center inner">
+                <div class="contact-content">
+                    <h1>contact form</h1>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p>NULL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <form action="#" method="post" class="contact-form">
+                    <div class="col-sm-6 contact-form-left">
+                        <div class="form-group">
+                            <input name="name" type="text" class="form-control" id="name" placeholder="Name">
+                            <input type="email" name="email" class="form-control" id="mail" placeholder="Email">
+                            <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 contact-form-right">
+                        <div class="form-group">
+                            <textarea name="message" rows="6" class="form-control" id="comment" placeholder="Your message here..."></textarea>
+                            <button type="submit" class="btn btn-default">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
