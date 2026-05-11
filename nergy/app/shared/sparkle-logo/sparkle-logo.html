@@ -1,0 +1,21 @@
+<div
+  class="hero-logo-wrapper"
+  (mouseenter)="onHoverStart()"
+  (mouseleave)="onHoverEnd()"
+>
+  <img class="hero-logo" [src]="src" [alt]="alt" [title]="alt" />
+
+  <span
+    *ngFor="let s of sparkles"
+    class="sparkle"
+    [ngStyle]="{
+      top: s.top + '%',
+      left: s.left + '%',
+      width: s.size + 'px',
+      height: s.size + 'px',
+      animationDuration: s.duration + 's',
+      animationDelay: s.delay + 's',
+      transform: 'translate(-50%, -50%) rotate(' + s.rotate + 'deg)'
+    }"
+  ></span>
+</div>

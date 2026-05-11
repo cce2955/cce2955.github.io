@@ -1,0 +1,15 @@
+<section class="highlight-reel">
+  <h2 class="reel-heading">{{ heading }}</h2>
+  <div class="reel-grid">
+    <article
+      *ngFor="let item of items; let i = index"
+      class="reel-card bordered-panel feature-card-enter"
+      [style.animation-delay]="(i * 0.14) + 's'"
+    >
+      <div class="reel-icon">{{ item.icon }}</div>
+      <h3 class="reel-title">{{ item.title }}</h3>
+      <p class="reel-desc">{{ item.description }}</p>
+      <a class="reel-cta" [routerLink]="item.ctaLink">{{ item.ctaLabel }}</a>
+    </article>
+  </div>
+</section>

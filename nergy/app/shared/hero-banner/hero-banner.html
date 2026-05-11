@@ -1,0 +1,25 @@
+<main class="hero">
+  <section class="hero-copy hero-copy-enter">
+    <ng-content select="[slot=logo]"></ng-content>
+
+    <p class="eyebrow">{{ config.eyebrow }}</p>
+    <h1>{{ config.headline }}</h1>
+    <p class="subtext">{{ config.subtext }}</p>
+
+    <div class="hero-actions">
+      <a
+        *ngFor="let cta of config.ctas"
+        class="btn"
+        [class.btn-primary]="cta.primary"
+        [class.btn-secondary]="!cta.primary"
+        [routerLink]="cta.link"
+      >
+        {{ cta.label }}
+      </a>
+    </div>
+  </section>
+
+  <section class="hero-visual hero-visual-enter">
+    <ng-content select="[slot=visual]"></ng-content>
+  </section>
+</main>

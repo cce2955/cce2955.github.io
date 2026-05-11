@@ -1,0 +1,57 @@
+<div class="page page-enter">
+  <app-hero-banner [config]="heroBanner">
+    <app-sparkle-logo
+      slot="logo"
+      class="hero-logo-mark"
+      src="nergytransparent.PNG"
+      alt="nergy logo"
+    ></app-sparkle-logo>
+
+    <div slot="visual" class="brand-panel bordered-panel hero-visual-enter">
+      <p class="eyebrow">Collections</p>
+
+      <div class="panel-list">
+        <a
+          class="panel-item"
+          href="/wicks"
+          [class.panel-item-active]="activePanel === 'wicks'"
+          (click)="onPanelClick($event, 'wicks', '/wicks')"
+        >
+          <span class="panel-dot"></span>
+          <span>Wicks</span>
+        </a>
+
+        <a
+          class="panel-item"
+          href="/sprays"
+          [class.panel-item-active]="activePanel === 'sprays'"
+          (click)="onPanelClick($event, 'sprays', '/sprays')"
+        >
+          <span class="panel-dot"></span>
+          <span>Sprays</span>
+        </a>
+
+        <a
+          class="panel-item"
+          href="/body"
+          [class.panel-item-active]="activePanel === 'body'"
+          (click)="onPanelClick($event, 'body', '/body')"
+        >
+          <span class="panel-dot"></span>
+          <span>Body</span>
+        </a>
+      </div>
+    </div>
+  </app-hero-banner>
+
+  <section id="collections" class="landing-featured">
+    <app-featured-carousel [slides]="slides"></app-featured-carousel>
+  </section>
+
+  <section class="landing-highlights">
+    <app-highlight-reel
+      [items]="highlights"
+      heading="Our Collections"
+    ></app-highlight-reel>
+  </section>
+</div>
