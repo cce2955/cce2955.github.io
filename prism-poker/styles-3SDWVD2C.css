@@ -1,1 +1,52 @@
 :root{color-scheme:dark;--ink: #fff8ef;--muted: rgba(255, 248, 239, .68);--felt: #061e24;--felt-2: #0a2c35;--pink: #ff4fd8;--cyan: #35e9ff;--gold: #ffd36e;--lime: #a8ff5f;--violet: #8657ff}*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#050814;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif}body{overflow-x:hidden}button,a{font:inherit}button{cursor:pointer}
+
+/* compact landing pass: less manifesto, faster game */
+.page-shell main,
+.site-shell main {
+  padding-top: 28px !important;
+  padding-bottom: 54px !important;
+}
+
+.page-shell .hero,
+.site-shell .hero {
+  min-height: 0 !important;
+  margin-bottom: 18px !important;
+  gap: 20px !important;
+  align-items: center !important;
+}
+
+.page-shell .hero h1,
+.site-shell .hero h1 {
+  max-width: 720px !important;
+  font-size: clamp(2.7rem, 5.4vw, 5.2rem) !important;
+  line-height: .96 !important;
+  letter-spacing: -.055em !important;
+}
+
+.page-shell .hero p,
+.site-shell .hero p,
+.site-shell .hero-text {
+  max-width: 560px !important;
+  margin-top: 12px !important;
+  font-size: clamp(.95rem, 1.1vw, 1.04rem) !important;
+  line-height: 1.45 !important;
+}
+
+.page-shell .hero-panel,
+.site-shell .control-panel {
+  padding: 16px !important;
+  border-radius: 22px !important;
+}
+
+.site-shell .hero-actions,
+.site-shell .control-panel {
+  margin-top: 18px !important;
+}
+
+@media (max-width: 760px) {
+  .page-shell .hero,
+  .site-shell .hero {
+    grid-template-columns: 1fr !important;
+  }
+}
+
