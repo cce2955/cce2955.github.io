@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1520"/>
+      <stop offset="1" stop-color="#10101d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" rx="34" fill="url(#g)"/>
+  <rect x="60" y="60" width="1160" height="600" rx="26" fill="#0d111a" stroke="#263542"/>
+  <text x="100" y="140" fill="#73edf5" font-family="Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="4">VALIDATION</text>
+  <text x="100" y="225" fill="#f6f8fb" font-family="Arial, sans-serif" font-size="56" font-weight="700">Exceptions surfaced instead of hidden.</text>
+  <text x="100" y="285" fill="#8b96a5" font-family="Arial, sans-serif" font-size="26">Replace this placeholder with the real capture.</text>
+  <rect x="100" y="350" width="1080" height="34" rx="8" fill="#162330"/>
+  <rect x="100" y="410" width="880" height="34" rx="8" fill="#14202c"/>
+  <rect x="100" y="470" width="1010" height="34" rx="8" fill="#162330"/>
+  <rect x="100" y="530" width="690" height="34" rx="8" fill="#14202c"/>
+</svg>
